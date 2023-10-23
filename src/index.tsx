@@ -1,4 +1,5 @@
 import ReactDOM from "react-dom/client";
+import { GuestList } from "./state/GuestList";
 
 const el = document.getElementById("root");
 
@@ -8,6 +9,7 @@ const App = () => {
   return (
     <div>
       <h1>Hi there!</h1>
+      <GuestList></GuestList>
     </div>
   );
 };
