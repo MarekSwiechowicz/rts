@@ -1,7 +1,11 @@
 import { Child } from "./Child";
 
 const Parent = () => {
-  return <Child color="red" />;
+  const handleClick = () => {
+    console.log("clicked");
+  };
+
+  return <Child color="red" onClick={handleClick} />;
 };
 
 export default Parent;
