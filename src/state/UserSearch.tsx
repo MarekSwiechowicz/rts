@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const users = [
   {
     name: "wojtek",
-    age: "18",
+    age: 18,
   },
 ];
 
@@ -15,15 +15,16 @@ export const UserSearch: React.FC = () => {
     const foundUser = users.find((user) => {
       return user.name === name;
     });
-
-    console.log(foundUser);
+    setUser(foundUser);
   };
 
   return (
     <div>
+      <div>User Search</div>
       <input name={name} onChange={(e) => setName(e.target.value)}></input>
-      <button onClick={onClickHandler}></button>
+      <button onClick={onClickHandler}>Find User</button>
       <div>{user && user.name}</div>
+      <div>{user && user.age}</div>
     </div>
   );
 };
